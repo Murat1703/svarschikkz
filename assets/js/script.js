@@ -25,7 +25,7 @@ menuBurger.addEventListener('click', () => {
 $('a[href*="#"]').on('click', function() {
   $('html, body').animate({
     scrollTop: $($.attr(this, 'href')).offset().top
-  }, 400);
+  }, 1000);
   return false;
 });
 window.addEventListener('scroll', function(e){
@@ -36,3 +36,18 @@ window.addEventListener('scroll', function(e){
     toTopBtn.classList.remove('__active-top');
   }
 })
+
+var openModalButtons = document.querySelectorAll('.main-btn');
+/**var closeModalButton = document.getElementById("close-modal-button");**/
+var modalOverlay = document.querySelector('.modal-window');
+
+for(var n = 0; n < openModalButtons.length; n++){
+  openModalButtons[n].addEventListener("click", function() {
+    modalOverlay.classList.add('__active-modal')
+  })     
+}
+
+
+/**closeModalButton.addEventListener("click", function() {
+  modalOverlay.style.display = "none";
+});**/

@@ -55,6 +55,9 @@
         flex-direction: column;
         gap: 10px;
     }
+    .user-contacts input{
+        width: 100%;
+    }
     .img-contact img{
         width: 100%;
     }
@@ -64,5 +67,7 @@
     .works-spark{
         display: none;
     }
-
+    #modal-content{
+        width: 90%;
+    }
 }

@@ -56,7 +56,7 @@
             <div class="main-inner-content container">
                 <h1 class="main-title">Сварочные работы</h1>
                 <p class="main-subtitle">любой сложности</p>
-                <a href="" class="main-btn __btn-margin">Оставить заявку</a>
+                <a href="javascript:void(0)" class="main-btn __btn-margin" id="open-modal-button">Оставить заявку</a>
                 <div class="slider-arrows">
                     <div class="prev-btn"></div>
                     <div class="next-btn"></div>
@@ -127,7 +127,7 @@
                                 <li>Кованая беседка</li>
                                 <li>Теплица промышленная</li>
                             </ul>
-                            <a href="" class="main-btn __btn-margin service-btn">Заказать</a>
+                            <a href="javascript:void(0)" class="main-btn __btn-margin service-btn">Заказать</a>
                         </div>
                     </div>
                     <div class="service-card-item">
@@ -139,7 +139,7 @@
                                 <li>Сварка деталей подвески</li>
                                 <li>Сварка петель</li>
                             </ul>
-                            <a href="" class="main-btn __btn-margin service-btn">Заказать</a>
+                            <a href="javascript:void(0)" class="main-btn __btn-margin service-btn">Заказать</a>
                         </div>
                     </div>
                     <div class="service-card-item">
@@ -151,7 +151,7 @@
                                 <li>Установка банных печей</li>
                                 <li>Решетки для окон</li>
                             </ul>
-                            <a href="" class="main-btn __btn-margin service-btn">Заказать</a>
+                            <a href="javascript:void(0)" class="main-btn __btn-margin service-btn">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -232,8 +232,7 @@
                           <div class="preloader"></div>
                           <p class="contact-form__message"></p>
                         </form>
-                      </div>
-                    
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -247,7 +246,41 @@
 
     <a href="#main" class="to-top-btn"><img src="assets/img/top-btn.svg" alt="toTop"></a>
 
-
+    <!--<button id="open-modal-button">Open Modal</button>-->
+    <div id="modal-overlay" class="modal-window">
+      <div id="modal-content">
+        <div class="form-wrapper">
+            <form id="form-contact" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
+            <p class="request-title __modal-request-title">Оставить заявку</p>
+            <p class="request-subtitle __modal-request-subtitle">Оставьте ваши данные и мы свяжемся с вами
+            </p>
+              <div class="user-contacts __modal-user-contacts">
+                <!-- Поле с именем -->
+                <div class="contact-form__input-wrapper contact-form__input-wrapper_name __modal">
+                    <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                        placeholder="Введите ваше имя">
+                </div>
+            
+                <!-- Поле с телефоном -->
+                <div class="contact-form__input-wrapper contact-form__input-wrapper_phone __modal">
+                    <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
+                        placeholder="Введите ваш телефон">
+                </div>
+              </div>
+        
+              <!--Поле с темой в письме-->
+              <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme" value="заявка с сайта">
+        
+              <!--Кнопка отправки формы-->
+              <button type="submit" class="contact-form__button main-btn __modal-btn">Отправить</button>
+              <div class="preloader"></div>
+              <p class="contact-form__message"></p>
+            </form>
+        </div>                    
+        <!--<button id="close-modal-button">Close</button>-->
+      </div>
+    </div>
+    
      
 </body>
 </html>
