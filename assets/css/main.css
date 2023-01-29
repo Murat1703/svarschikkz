@@ -397,6 +397,9 @@ a[data-fancybox] img {
 .contact-form__message{
     margin: 10px 0;
 }
+.contact-form__button{
+    outline: none;
+}
 .preloader {
     position: relative;
     margin: 0 0 0 45%;
@@ -454,4 +457,18 @@ a[data-fancybox] img {
 }
 .footer{
     background: #19191a;
+}
+.to-top-btn{
+    display: none;
+    position: fixed;
+    left: 20px;
+    bottom: 10px;
+}
+.to-top-btn.__active-top{
+    display: block;
+}
+.to-top-btn img{
+    display: block;
+    width: 40px;
+    opacity: .85;
 }
